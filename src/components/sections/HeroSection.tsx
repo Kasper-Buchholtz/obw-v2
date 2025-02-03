@@ -24,35 +24,24 @@ interface HeroProps {
   data?: any
 }
 
-const before =
-  'before:bg-gradient-to-b before:from-dark/0 before:to-dark/60 before:absolute before:inset-0 before:z-10 '
 const Hero: React.FC<HeroProps> = ({ data, ...props }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const OpenModal = () => {
-    setIsOpen(!isOpen)
-  }
   return (
-    <>
-      <Section
-        {...props}
-        variant="lys"
-        paddingX="none"
-        className={`h-screen relative place-content-center overflow-hidden ${before}`}
-      >
-        <ul className='col-span-full'>
-          {data?.content?.map((item: any, index: number) => (
-            <li key={index}>
-                <Heading variant="h1" className="text-center">
-                  {item.title}
-                </Heading>
-            </li>
-          ))}
-        </ul>
-
-        
-      </Section>
-    </>
+    <Section
+      {...props}
+      variant="lys"
+      paddingX="none"
+      className="relative h-screen overflow-hidden "
+    >
+      <ul className='col-span-full'>
+        {data?.content?.map((item: any, index: number) => (
+          <li key={index}>
+            <Heading tag='h2' type='h1' className="text-center">
+              {item.link.label}
+            </Heading>
+          </li>
+        ))}
+      </ul>
+    </Section>
   )
 }
 

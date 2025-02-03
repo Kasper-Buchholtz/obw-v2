@@ -25,11 +25,6 @@ export const heroType = defineType({
           type: 'object',
           fields: [
             defineField({
-              name: 'title',
-              type: 'string',
-              title: 'Titel',
-            }),
-            defineField({
               name: 'media',
               type: 'file',
               title: 'Video',
@@ -47,7 +42,7 @@ export const heroType = defineType({
   ],
   preview: {
     select: {
-      title: "title",
+      title: "link.label",
       tagline: "tagline",
       type: "type",
       media: "image",
