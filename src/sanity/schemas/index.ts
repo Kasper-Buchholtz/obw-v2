@@ -64,6 +64,7 @@ export const schemaTypes = [
   LogoGallery,
   LogoGallery2,
   WatchType,
+  WatchType,
   ImagesType,
   MediaType,
   CallToAction,
