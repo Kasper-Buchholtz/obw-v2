@@ -7,6 +7,7 @@ import Section from '@/components/sections/Section'
 import Modal from '../molecules/Modal'
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { Button } from '../atoms/Button'
 
 /**
  *
@@ -29,15 +30,18 @@ const Hero: React.FC<HeroProps> = ({ data, ...props }) => {
     <Section
       {...props}
       variant="lys"
-      paddingX="none"
       className="relative h-screen overflow-hidden "
     >
-      <ul className='col-span-full'>
+      <ul className='mt-auto space-y-12 col-span-full'>
         {data?.content?.map((item: any, index: number) => (
-          <li key={index}>
-            <Heading tag='h2' type='h1' className="text-center">
-              {item.link.label}
-            </Heading>
+          <li key={index} className=''>
+            <div className='text-darks-900 text-shadow-0'>
+              <Button variant='none' link={item.link}>
+                <Heading tag='h2' type='h2' fontFamily='serif'>
+                  {item.link.label}
+                </Heading>
+              </Button>
+            </div>
           </li>
         ))}
       </ul>

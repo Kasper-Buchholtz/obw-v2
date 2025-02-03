@@ -1,10 +1,10 @@
 import 'swiper/css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { loadPage } from '@/sanity/queries/loadPage';
 import PageBuilder from '~/components/PageBuilder';
 import PageContainer from '@/components/PageContainer';
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 import { groq } from 'next-sanity';
 import { ImageQuery } from '@/sanity/queries/atoms/Image.query';
 import { urlFor } from '~/sanity/lib/sanity.image';
@@ -26,7 +26,7 @@ const caseType = groq`
 export default async function DynamicRoute({
     params: { slug: slugArray },
 }: {
-    params: { slug: string[] }
+    params: { slug: string[] };
 }) {
     const slug = `${slugArray.join('/')}`;
     const page = await loadPage(slug, 'da', caseType);
