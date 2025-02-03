@@ -24,9 +24,9 @@ const caseType = groq`
 `;
 
 export default async function DynamicRoute({
-    params: { slug: slugArray, locale },
+    params: { slug: slugArray },
 }: {
-    params: { slug: string[]; locale: string }
+    params: { slug: string[] }
 }) {
     const slug = `${slugArray.join('/')}`;
     const page = await loadPage(slug, 'da', caseType);
