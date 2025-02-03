@@ -1,4 +1,4 @@
-[data-border='true'] *:not(svg) + span {
+/* [data-border='true'] *:not(svg) + span {
   box-shadow: none !important;
 }
 
@@ -144,3 +144,4 @@ button[data-ui='Button']
     url('/backend/fonts/SuperWorkSans-Regular.woff'),
     url('/backend/fonts/SuperWorkSans-Regular.ttf');
 }
+ */

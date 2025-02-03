@@ -1,7 +1,6 @@
 import groq from 'groq'
-import { pageBuilderQuery } from '../queries/organisms/PagePuilder.query'
+import { pageBuilderQuery } from '../queries/organisms/PageBuilder.query'
 import { ImageQuery } from '../queries/atoms/Image.query'
-import { ButtonQuery } from '../queries/atoms/Button.query'
 
 // GROQ Navigation Query
 export const NAVIGATION_QUERY = groq`

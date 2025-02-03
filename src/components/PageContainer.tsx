@@ -49,10 +49,9 @@ export default function PageContainer({
     <>
       <Header />
       <Lenis options={lenis} root={typeof document !== 'undefined' ? document.documentElement : null} />
-      <main className={` min-h-screen bg-superego-light-light`}>
+      <main className={` text-lights-0 min-h-screen bg-darks-900`}>
         {children}
       </main>
-      <Footer />
       {/*  <!-- Google Tag Manager (noscript) -->   */}
       <noscript>
         <iframe

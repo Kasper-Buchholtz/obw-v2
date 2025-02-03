@@ -5,7 +5,7 @@ import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-import { media } from 'sanity-plugin-media'
+import { media, mediaAssetSource } from 'sanity-plugin-media'
 import { apiVersion, dataset, projectId } from '@/sanity/lib/sanity.api'
 import { schema } from '@/sanity/schemas'
 import { linkField } from '~/sanity/schemas/customFields/LinkField/linkField'
@@ -26,6 +26,7 @@ import { CustomToolMenu } from '~/components/sanity/ToolMenu'
 import Sidebar from '~/components/sanity/Sidebar.component'
 import { createVisualAction } from '~/sanity/actions/sanity.actions'
 import { myTheme } from '~/sanity/lib/sanity.theme'
+import {vimeoField} from 'sanity-plugin-vimeo-field'
 
 
 export default defineConfig({
@@ -34,7 +35,7 @@ export default defineConfig({
   title: 'Superweb Studio',
   subtitle: 'Superweb Studio',
   projectId,
-  theme: myTheme,
+  /* theme: myTheme, */
   icon: SuperegoLogo,
   dataset,
   schema,
@@ -95,6 +96,9 @@ export default defineConfig({
         },
       },
     }),
+    vimeoField({
+      accessToken: process.env.SANITY_STUDIO_VIMEO_ACCESS_TOKEN,
+    }),
 
     media(),
     visionTool({ defaultApiVersion: apiVersion, title: 'Udviklingsværktøj' }),
@@ -117,4 +121,5 @@ export default defineConfig({
       return prev
     },
   },
+
 })

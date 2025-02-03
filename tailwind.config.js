@@ -23,6 +23,8 @@ module.exports = {
         {
           // Info text // H6 // prev —— small
           lineHeight: '150%',
+          letterSpacing: '0',
+          fontWeight: '300',
         },
       ],
       regular: [
@@ -30,6 +32,8 @@ module.exports = {
         {
           // Paragraph
           lineHeight: '1.5',
+          letterSpacing: '0',
+          fontWeight: '400',
         },
       ],
       increased: [
@@ -37,6 +41,8 @@ module.exports = {
         {
           // H5 // prev —— increased
           lineHeight: '1.5',
+          letterSpacing: '0',
+          fontWeight: '700',
         },
       ],
       medium: [
@@ -44,6 +50,8 @@ module.exports = {
         {
           // H4 // prev —— medium
           lineHeight: '1.5',
+          letterSpacing: '0',
+          fontWeight: '700',
         },
       ],
       large: [
@@ -51,6 +59,8 @@ module.exports = {
         {
           // H3 // prev —— large
           lineHeight: 'clamp(120%, calc(120% + 0.2vw), 120%)',
+          letterSpacing: '0',
+          fontWeight: '700',
         },
       ],
       huge: [
@@ -58,13 +68,17 @@ module.exports = {
         {
           // H2 // prev —— huge
           lineHeight: '1',
+          letterSpacing: '0',
+          fontWeight: '700',
         },
       ],
       giant: [
-        'clamp(2.441em, calc(2.441em + 2.1111vw), 5.063em);',
+        'clamp(7.141em, calc(2.441em + 2.1111vw), 5.063em);',
         {
           // H1 // prev —— giant
           lineHeight: '1',
+          letterSpacing: '0',
+          fontWeight: '700',
         },
       ],
     },
@@ -95,6 +109,15 @@ module.exports = {
           },
           dark: '#242B31',
           black: '#3D3D3D',
+        },
+
+        lights: {
+          0: '#FFFFFF',
+          400: '#858585',
+        },
+        darks: {
+          700: '#333333',
+          900: '#0A0A0A'
         },
       },
       gridTemplateColumns: {

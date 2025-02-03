@@ -1,6 +1,6 @@
 // ./schemas/heroType.ts
 
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 import { HeroIcon } from '@/components/sanity/PageBuilderIcons'
 export const heroType = defineType({
   name: "hero",
@@ -17,28 +17,33 @@ export const heroType = defineType({
   title: "Hero 1",
   fields: [
     defineField({
-      group: "content",
-      name: "title",
-      type: "string",
-      title: "Titel",
-    }),
-    defineField({
-      group: "content",
-      name: "subtitle",
-      type: "string",
-    }),
-    {
-      group: "media",
-      name: "MediaObject",
-      title: "Medie",
-      type: "MediaObject",
-    },
-    {
-      group: "settings",
-      name: "SectionSettings",
-      title: "Indstillinger",
-      type: "SectionSettings",
-    },
+      name: 'content',
+      type: 'array',
+      title: 'Indhold',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              type: 'string',
+              title: 'Titel',
+            }),
+            defineField({
+              name: 'media',
+              type: 'file',
+              title: 'Video',
+            }),
+            defineField({
+              name: 'link',
+              type: 'link',
+              title: 'Link',
+            })
+          ]
+        })
+      ],
+    })
+
   ],
   preview: {
     select: {

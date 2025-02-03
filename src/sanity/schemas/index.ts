@@ -7,6 +7,7 @@ import employee from '@/sanity/schemas/management/employee.schema'
 import position from '@/sanity/schemas/management/position.schema'
 import article from '@/sanity/schemas/documents/article.schema'
 import event from '@/sanity/schemas/documents/event.schema'
+import caseDocument from '@/sanity/schemas/documents/case'
 import page from '@/sanity/schemas/documents/page-document.schema'
 import { ArticlesType } from '@/sanity/schemas/sections/ArticlesType.schema'
 import { accordionType } from '@/sanity/schemas/sections/atoms/accordionType.schema'
@@ -44,7 +45,8 @@ import { heroType } from '@/sanity/schemas/sections/herotype.schema'
 import { Hero2Type } from './sections/Hero2Type.schema'
 import { Hero3Type } from './sections/Hero3Type.schema'
 import { MediaObject } from './sections/atoms/MediaObject.schema'
-
+import { WatchType } from './sections/Watch.schema'
+import { ImagesType } from './sections/Images.schema'
 export const schemaTypes = [
   heroType,
   Hero2Type,
@@ -61,6 +63,8 @@ export const schemaTypes = [
   Gallery,
   LogoGallery,
   LogoGallery2,
+  WatchType,
+  ImagesType,
   MediaType,
   CallToAction,
   CallToAction2,
@@ -90,6 +94,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     reusable,
     page,
     event,
+    category,
+    caseDocument,
     article,
     // Management
     settings,
@@ -98,10 +104,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     navigation,
     position,
     heroType,
+    WatchType,
+    ImagesType,
     Hero2Type,
     Hero3Type,
     employee,
-    category,
     // Objects
     blockContent,
     Gallery,

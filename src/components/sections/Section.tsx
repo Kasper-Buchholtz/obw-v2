@@ -17,7 +17,7 @@ import { cn } from '@/utils/utils'
 const sectionVariants = cva('grid', {
   variants: {
     variant: {
-      lys: 'bg-superego-light-light text-superego-dark',
+      lys: 'bg-darks-900 text-lights-0',
       mørk: 'bg-superego-dark text-superego-light-base',
       lilla: 'bg-superego-purple text-superego-light-base',
     },

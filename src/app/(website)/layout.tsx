@@ -27,7 +27,7 @@ export default async function Root({ children }: { children: React.ReactNode }) 
         {settings?.headScripts && <script dangerouslySetInnerHTML={{ __html: settings.headScripts }} />}
       </Head>
       <body
-        className={`selection:text-superego-light-light selection:bg-superego-green ${isDraftModeEnabled ? 'debug-screens' : ''}`}
+        className={`selection:text-darks-900 text-lights-0 selection:bg-lights-0 ${isDraftModeEnabled ? 'debug-screens' : ''}`}
       >
         {children}
         <SanityLive />
