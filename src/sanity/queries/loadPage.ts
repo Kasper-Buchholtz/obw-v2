@@ -10,10 +10,12 @@ export type PagePayload = {
   image?: any
   _id?: string
   _type: string
+  altText?: string
   slug: { current: string }
   title?: string
   body?: any
   pageBuilder: any[]
+  musicalObject?: any
   seoGroup: {
     seoTitle?: string
     seoDescription?: string

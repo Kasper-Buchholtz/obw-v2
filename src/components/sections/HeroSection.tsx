@@ -40,9 +40,17 @@ const Hero: React.FC<HeroProps> = ({ data, ...props }) => {
         paddingX="none"
         className={`h-screen relative place-content-center overflow-hidden ${before}`}
       >
-        <pre>
-          {JSON.stringify(data, null, 2)}
-        </pre>
+        <ul className='col-span-full'>
+          {data?.content?.map((item: any, index: number) => (
+            <li key={index}>
+                <Heading variant="h1" className="text-center">
+                  {item.title}
+                </Heading>
+            </li>
+          ))}
+        </ul>
+
+        
       </Section>
     </>
   )

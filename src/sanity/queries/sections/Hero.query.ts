@@ -1,9 +1,13 @@
 import groq from 'groq'
 
-import { MediaObjectQuery } from '../molecules/MediaObject.query'
+import { ButtonQuery } from '../atoms/Button.query'
 export const heroQuery = groq`
 _type == "hero" => {
-...,
-  _type,
+  ...,
+  content[] {
+    title,
+    ${ButtonQuery}
+  },
+  _type
 }
 `
