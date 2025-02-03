@@ -26,8 +26,8 @@ export default async function IndexRoute({
     return (
         <PageContainer>
             <Section>
-                {MusicalType.map((data) => (
-                    <MusicalCaseCard data={data} />
+                {MusicalType?.map((data, index) => (
+                    <MusicalCaseCard key={index} data={data} />
                 ))}
             </Section>
             <PageBuilder sections={page.pageBuilder} />
