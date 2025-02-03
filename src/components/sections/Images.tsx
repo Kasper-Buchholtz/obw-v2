@@ -30,7 +30,7 @@ const Images = ({ data }) => {
     return (
         <Section className="h-screen grid-rows-4">
             {data.images.map((image, index) => (
-                <div className={`${images[index].className}`}>
+                <div className={`${images[index].className}`} key={index}>
                     <Photo key={index} image={image} />
                 </div>
             ))}
