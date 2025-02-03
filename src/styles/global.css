@@ -39,4 +39,7 @@
       1px -1px 0 white,
       -1px 1px white;
   }
+  .text-shadow-none {
+    text-shadow: none;
+  }
 }

@@ -35,10 +35,10 @@ const Hero: React.FC<HeroProps> = ({ data, ...props }) => {
       <ul className='mt-auto space-y-12 col-span-full'>
         {data?.content?.map((item: any, index: number) => (
           <li key={index} className=''>
-            <div className=' text-shadow-0'>
+            <div className=''>
               <Button variant='none' link={item.link}>
                 <Heading tag='h2' type='h2' fontFamily='serif'>
-                  <span className='text-darks-900 group-hover:text-lights-0'>
+                  <span className='text-darks-900 group-hover:text-lights-0 group-hover:text-shadow-none text-shadow-0'>
                   {item.link.label}
                   </span>
                 </Heading>

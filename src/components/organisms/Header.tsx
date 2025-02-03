@@ -254,8 +254,8 @@ const Header = () => {
         </button> */}
         <button onClick={handleClick} aria-controls="menu" aria-label="Menu" className="relative z-[999999999] -col-start-1 -col-end-1 size-11.5 group  my-auto">
           <div className="relative w-full h-full -translate-x-1/2 -right-1/2">
-            <span className={`block absolute transition-all h-0.5  bg-lights-0 group-hover:bg-secondary transform duration-500 ease-in-out -translate-y-1.5 w-10 ${isOpen ? "-rotate-[145deg]" : ""}`} aria-hidden="true" />
-            <span className={`block absolute transition-all h-0.5 w-12 bg-lights-0 group-hover:bg-secondary transform duration-500 ease-in-out translate-y-1.5 translate-x-1.5 ${isOpen ? "rotate-[125deg]" : ""}`} aria-hidden="true" />
+            <span className={`block absolute transition-all h-0.5  bg-lights-0 group-hover:bg-secondary transform duration-500 ease-in-out translate-y-2.5 w-10 ${isOpen ? "-rotate-[145deg]" : ""}`} aria-hidden="true" />
+            <span className={`block absolute transition-all h-0.5 w-12 bg-lights-0 group-hover:bg-secondary transform duration-500 ease-in-out translate-y-2.5 translate-x-1.5 ${isOpen ? "rotate-[125deg]" : ""}`} aria-hidden="true" />
           </div>
         </button>
       </header>
